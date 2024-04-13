@@ -1,0 +1,27 @@
+class Forma {
+  constructor(nombre, lados, longitudLado) {
+    this.nombre = nombre;
+    this.lados = lados;
+    this.longitudLado = longitudLado;
+  }
+
+  calcularPerimetro() {
+    const perimetro = this.lados * this.longitudLado;
+    console.log(`El perímetro del ${this.nombre} es ${perimetro}`);
+  }
+}
+
+class Cuadrado extends Forma {
+  constructor(longitudLado) {
+    super("cuadrado", 4, longitudLado);
+  }
+
+  calcularArea() {
+    const area = this.longitudLado ** 2;
+    console.log(`El área del cuadrado es ${area}`);
+  }
+}
+
+const cuadrado = new Cuadrado(5);
+cuadrado.calcularPerimetro(); // Esto mostrará "El perímetro del cuadrado es 20" en la consola
+cuadrado.calcularArea(); // Esto mostrará "El área del cuadrado es 25" en la consola

@@ -1,18 +1,18 @@
-class Shape {
-  constructor(name, sides, sideLength) {
-    this.name = name;
-    this.sides = sides;
-    this.sideLength = sideLength;
+class Forma {
+  constructor(nombre, lados, longitudLado) {
+    this.nombre = nombre;
+    this.lados = lados;
+    this.longitudLado = longitudLado;
   }
 
-  calcPerimeter() {
-    const perimeter = this.sides * this.sideLength;
-    console.log(`The perimeter of the ${this.name} is ${perimeter}`);
+  calcularPerimetro() {
+    const perimetro = this.lados * this.longitudLado;
+    console.log(`El perímetro del ${this.nombre} es ${perimetro}`);
   }
 }
 
-const square = new Shape("square", 4, 5);
-square.calcPerimeter(); // This will log "The perimeter of the square is 20" to the console
+const cuadrado = new Forma("cuadrado", 4, 5);
+cuadrado.calcularPerimetro(); // Esto mostrará "El perímetro del cuadrado es 20" en la consola
 
-const triangle = new Shape("triangle", 3, 3);
-triangle.calcPerimeter(); // This will log "The perimeter of the triangle is 9" to the console
+const triangulo = new Forma("triángulo", 3, 3);
+triangulo.calcularPerimetro(); // Esto mostrará "El perímetro del triángulo es 9" en la consola
